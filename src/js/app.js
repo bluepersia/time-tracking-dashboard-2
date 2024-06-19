@@ -1,8 +1,24 @@
+const btnDaily = document.querySelector ('.cmp__btn-daily');
+const btnWeekly = document.querySelector ('.cmp__btn-weekly');
+const btnMonthly = document.querySelector ('.cmp__btn-monthly');
 
+    btnDaily.addEventListener ('click', () => setOpt ('daily'));
+    btnWeekly.addEventListener ('click', () => setOpt ('weekly'));
+    btnMonthly.addEventListener ('click', () => setOpt ('monthly'));
+
+
+const grid = document.querySelector ('.cmp__grid');
 let opt = 'daily';
 let data;
 
 fetchAndRenderBlocks ();
+
+
+function setOpt (value)
+{
+    opt = value;
+    render ();
+}
 
 async function fetchAndRenderBlocks () 
 {
@@ -19,7 +35,7 @@ async function fetchAndRenderBlocks ()
 
 function render ()
 {
-    document.querySelector ('.cmp').innerHTML += data.map (obj => 
+    grid.innerHTML = data.map (obj => 
         `
         <div class="cmp__block cmp__block-${obj.title.replace (' ', '-')}">
             <div class="cmp__block__inner">
@@ -35,6 +51,17 @@ function render ()
         </div>
         `
     ).join ('');
+
+    btnDaily.classList.remove ('active');
+    btnWeekly.classList.remove ('active');
+    btnMonthly.classList.remove ('active');
+    
+    if (opt === 'daily')
+        btnDaily.classList.add ('active');
+    else if (opt === 'weekly')
+        btnWeekly.classList.add ('active');
+    if (opt === 'monthly')
+        btnMonthly.classList.add ('active');
 }
 
 

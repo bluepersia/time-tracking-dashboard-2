@@ -72,6 +72,14 @@ html {
 .cmp__btn-daily, .cmp__btn-weekly, .cmp__btn-monthly {
   width: 33%;
 }
+.cmp__btn-daily.active, .cmp__btn-weekly.active, .cmp__btn-monthly.active {
+  color: white;
+}
+.cmp__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
 .cmp__block {
   padding-top: 2.5rem;
   background-repeat: no-repeat;
@@ -138,22 +146,25 @@ html {
 }
 
 .btn, .cmp__btn-daily, .cmp__btn-weekly, .cmp__btn-monthly {
+  cursor: pointer;
   background: none;
   border: none;
   color: #7078C9;
+  pointer-events: all;
+  transition: color 400ms;
 }
 
 @media (min-width: 1000px) {
   .cmp {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(auto, 255px));
-    grid-template-rows: auto auto;
-    row-gap: 2rem;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
   }
   .cmp__header {
     grid-column: 1/2;
     grid-row: 1/-1;
     height: 100%;
+    max-width: 255px;
   }
   .cmp__intro {
     flex-direction: column;
@@ -177,8 +188,15 @@ html {
     text-align: left;
     width: 100%;
   }
+  .cmp__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 255px));
+    grid-template-rows: auto auto;
+    row-gap: 2rem;
+  }
   .cmp__block__inner {
     height: 100%;
+    padding: 1.93rem 2rem 2rem;
   }
   .cmp__block__header {
     margin-bottom: 1.6rem;
