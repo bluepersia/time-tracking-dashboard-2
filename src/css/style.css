@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0E1323;
+  padding: 5.4rem 6.4%;
+  color: white;
+}
+
+p {
+  color: #BBC0FF;
+}
+
+html {
+  font-size: 15px;
+}
+
+.heading-m, .btn, .cmp__btn-daily, .cmp__btn-weekly, .cmp__btn-monthly, .cmp__block__title {
+  font-size: 1.2rem;
+}
+
+.cmp {
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.cmp * {
+  box-sizing: border-box;
+}
+.cmp *:first-child {
+  margin-top: 0;
+}
+.cmp *:last-child {
+  margin-bottom: 0;
+}
+.cmp__intro {
+  background-color: #5747EA;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 1.33rem;
+  padding: 2.33rem 2.133rem;
+}
+.cmp__img-avatar {
+  width: 65px;
+  height: 65px;
+  border: solid 3px white;
+  border-radius: 50%;
+}
+.cmp__report-for {
+  margin-bottom: 0;
+}
+.cmp__name {
+  margin-top: 0;
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+.cmp__opts {
+  background-color: #1C204B;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6rem 0;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.cmp__btn-daily, .cmp__btn-weekly, .cmp__btn-monthly {
+  width: 33%;
+}
+.cmp__block {
+  padding-top: 2.5rem;
+  background-repeat: no-repeat;
+  background-position: top -1rem right 1.2rem;
+  border-radius: 15px;
+}
+.cmp__block-Work {
+  background-color: #FF8B64;
+  background-image: url(../../images/icon-work.svg);
+  background-size: 78px 78px;
+}
+.cmp__block-Play {
+  background-color: #55C2E6;
+  background-image: url(../../images/icon-play.svg);
+  background-size: 90px 90px;
+}
+.cmp__block-Study {
+  background-color: #FF5E7D;
+  background-image: url(../../images/icon-study.svg);
+  background-size: 78px 78px;
+}
+.cmp__block-Exercise {
+  background-color: #4BCF82;
+  background-image: url(../../images/icon-exercise.svg);
+  background-size: 80px 54px;
+}
+.cmp__block-Social {
+  background-color: #7335D2;
+  background-image: url(../../images/icon-social.svg);
+  background-size: 74px 100px;
+}
+.cmp__block-Self-Care {
+  background-color: #F1C75B;
+  background-image: url(../../images/icon-self-care.svg);
+  background-size: 72px 66px;
+}
+.cmp__block__inner {
+  background-color: #1C204B;
+  border-radius: 15px;
+  padding: 1.86rem 1.6rem;
+}
+.cmp__block__title {
+  margin-bottom: 0;
+  font-weight: 500;
+}
+.cmp__block__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.46rem;
+}
+.cmp__block__time {
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: 2.13rem;
+}
+.cmp__block__time-prev {
+  margin-top: 0;
+}
+.cmp__block__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn, .cmp__btn-daily, .cmp__btn-weekly, .cmp__btn-monthly {
+  background: none;
+  border: none;
+  color: #7078C9;
+}
+
+@media (min-width: 1000px) {
+  .cmp {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 255px));
+    grid-template-rows: auto auto;
+    row-gap: 2rem;
+  }
+  .cmp__header {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    height: 100%;
+  }
+  .cmp__intro {
+    flex-direction: column;
+    align-items: start;
+    padding: 2.46rem 2.13rem 5.3rem;
+  }
+  .cmp__img-avatar {
+    width: 78px;
+    height: 78px;
+  }
+  .cmp__name {
+    font-size: 2.66rem;
+  }
+  .cmp__opts {
+    flex-direction: column;
+    align-items: start;
+    padding: 1.73rem 2.13rem;
+    gap: 1.13rem;
+  }
+  .cmp__btn-daily, .cmp__btn-weekly, .cmp__btn-monthly {
+    text-align: left;
+    width: 100%;
+  }
+  .cmp__block__inner {
+    height: 100%;
+  }
+  .cmp__block__header {
+    margin-bottom: 1.6rem;
+  }
+  .cmp__block__main {
+    flex-direction: column;
+    align-items: start;
+  }
+  .cmp__block__time {
+    font-size: 3.73rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
