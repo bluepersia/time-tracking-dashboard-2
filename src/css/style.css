@@ -59,6 +59,7 @@ html {
 .cmp__name {
   margin-top: 0;
   font-weight: 300;
+  font-size: 1.6rem;
 }
 .cmp__opts {
   background-color: #1C204B;
@@ -140,6 +141,55 @@ html {
   background: none;
   border: none;
   color: #7078C9;
+}
+
+@media (min-width: 1000px) {
+  .cmp {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 255px));
+    grid-template-rows: auto auto;
+    row-gap: 2rem;
+  }
+  .cmp__header {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    height: 100%;
+  }
+  .cmp__intro {
+    flex-direction: column;
+    align-items: start;
+    padding: 2.46rem 2.13rem 5.3rem;
+  }
+  .cmp__img-avatar {
+    width: 78px;
+    height: 78px;
+  }
+  .cmp__name {
+    font-size: 2.66rem;
+  }
+  .cmp__opts {
+    flex-direction: column;
+    align-items: start;
+    padding: 1.73rem 2.13rem;
+    gap: 1.13rem;
+  }
+  .cmp__btn-daily, .cmp__btn-weekly, .cmp__btn-monthly {
+    text-align: left;
+    width: 100%;
+  }
+  .cmp__block__inner {
+    height: 100%;
+  }
+  .cmp__block__header {
+    margin-bottom: 1.6rem;
+  }
+  .cmp__block__main {
+    flex-direction: column;
+    align-items: start;
+  }
+  .cmp__block__time {
+    font-size: 3.73rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

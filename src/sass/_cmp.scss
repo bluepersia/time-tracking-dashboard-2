@@ -49,6 +49,7 @@
     &__name {
         margin-top: 0;
         font-weight: 300;
+        font-size: 1.6rem;
     }
 
     &__opts
@@ -160,4 +161,74 @@
     background: none;
     border:none;
     color: #7078C9;
+}
+
+
+
+@media (min-width:1000px)
+{
+    .cmp 
+    {
+        display: grid;
+        grid-template-columns: repeat((4, minmax(auto, 255px)));
+        grid-template-rows: auto auto;
+        row-gap: 2rem;
+
+        &__header {
+            grid-column: 1 / 2;
+            grid-row: 1 / -1;
+            height: 100%;
+        }
+
+        &__intro 
+        {
+            flex-direction: column;
+            align-items: start;
+            padding: 2.46rem 2.13rem 5.3rem;
+        }
+        &__img-avatar {
+            width: 78px;
+            height: 78px;
+        }
+
+        &__name
+        {
+            font-size: 2.66rem;
+        }
+
+        &__opts 
+        {
+            flex-direction: column;
+            align-items: start;;
+            padding: 1.73rem 2.13rem;
+            gap: 1.13rem;
+        }
+
+        &__btn-daily, &__btn-weekly, &__btn-monthly 
+        {
+            text-align: left;
+            width: 100%;
+        }
+
+        &__block
+        {
+            &__inner 
+            {
+                height: 100%;
+            }
+            &__header 
+            {
+                margin-bottom: 1.6rem;
+            }
+            &__main
+            {
+                flex-direction: column;
+                align-items: start;
+            }
+            &__time 
+            {
+                font-size: 3.73rem;
+            }
+        }
+    }
 }
