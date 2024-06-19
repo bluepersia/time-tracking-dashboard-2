@@ -1,0 +1,31 @@
+$color-VeryDarkBlue: #0E1323;
+$color-DarkBlue: #1C204B;
+$color-GreyishBlue: #33397A;
+$color-Blue:#5747EA;
+$color-White: white;
+$color-WhiteishBlue: #BBC0FF;
+
+$color-Orange:#FF8B64;
+$color-LightBlue: #55C2E6;
+$color-Red: #FF5E7D;
+$color-Green: #4BCF82;
+$color-Purple: #7335D2;
+$color-Yellow: #F1C75B;
+
+
+body 
+{
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: $color-VeryDarkBlue;
+    padding: 5.4rem 6.4%;
+    color: $color-White;
+}
+html {
+    font-size: 15px;
+}
