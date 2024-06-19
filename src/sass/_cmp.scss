@@ -4,6 +4,9 @@
 {
     box-sizing: border-box;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
 
     & * {
         box-sizing: border-box;
@@ -18,4 +21,143 @@
     {
         margin-bottom: 0;
     }
+
+    &__intro
+    {
+        background-color: $color-Blue;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        gap: 1.33rem;
+        padding:2.33rem 2.133rem;
+    }
+
+    &__img-avatar 
+    {
+        width: 65px;
+        height: 65px;
+        border:solid 3px $color-White;
+        border-radius: 50%;
+    }
+
+
+    &__report-for 
+    {
+        margin-bottom: 0;
+    }
+
+    &__name {
+        margin-top: 0;
+        font-weight: 300;
+    }
+
+    &__opts
+     {
+        background-color: $color-DarkBlue;
+        display: flex;
+        justify-content: space-between;
+        padding:1.6rem 0;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+     }
+
+     &__btn-daily, &__btn-weekly, &__btn-monthly 
+     {
+        @extend .btn;
+        width: 33%;
+     }
+
+
+     &__block
+     {
+        padding-top: 2.5rem;
+        background-repeat: no-repeat;
+        background-position: top -1rem right 1.2rem;
+        border-radius: 15px;
+        &-Work
+        {
+            background-color: $color-Orange;
+            background-image: url(../../images/icon-work.svg);
+            background-size: 78px 78px;
+        }
+        &-Play 
+        {
+            background-color: $color-LightBlue;
+            background-image: url(../../images/icon-play.svg);
+            background-size: 90px 90px;
+        }
+        &-Study 
+        {
+            background-color: $color-Red;
+            background-image: url(../../images/icon-study.svg);
+            background-size: 78px 78px;
+        }
+        &-Exercise 
+        {
+            background-color: $color-Green;
+            background-image: url(../../images/icon-exercise.svg);
+            background-size: 80px 54px;
+        }
+        &-Social 
+        {
+            background-color: $color-Purple;
+            background-image: url(../../images/icon-social.svg);
+            background-size: 74px 100px;
+        }
+        &-Self-Care 
+        {
+            background-color: $color-Yellow;
+            background-image: url(../../images/icon-self-care.svg);
+            background-size: 72px 66px;
+        }
+        &__inner 
+        {
+            background-color: $color-DarkBlue;
+            border-radius: 15px;
+            padding:1.86rem 1.6rem;
+        }
+
+        &__title
+        {
+            margin-bottom: 0;
+            font-weight: 500;
+            @extend .heading-m;
+        }
+        &__header 
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: .46rem;
+        }
+
+        &__time 
+        {
+            margin-bottom: 0;
+            font-weight: 300;
+            font-size: 2.13rem;
+        }
+
+        &__time-prev 
+        {
+            margin-top: 0;
+        }
+
+        &__main
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+     }
+}
+
+
+
+.btn 
+{
+    @extend .heading-m;
+    background: none;
+    border:none;
+    color: #7078C9;
 }
