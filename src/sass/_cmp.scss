@@ -66,8 +66,19 @@
      {
         @extend .btn;
         width: 33%;
+
+        &.active 
+        {
+            color: $color-White;
+        }
      }
 
+     &__grid
+      {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem
+      }
 
      &__block
      {
@@ -158,9 +169,13 @@
 .btn 
 {
     @extend .heading-m;
+    cursor: pointer;
     background: none;
     border:none;
     color: #7078C9;
+    pointer-events: all;
+
+    transition: color 400ms;
 }
 
 
@@ -169,15 +184,15 @@
 {
     .cmp 
     {
-        display: grid;
-        grid-template-columns: repeat((4, minmax(auto, 255px)));
-        grid-template-rows: auto auto;
-        row-gap: 2rem;
+        flex-direction: row;
+        align-items: start;
+        justify-content: start;
 
         &__header {
             grid-column: 1 / 2;
             grid-row: 1 / -1;
             height: 100%;
+            max-width: 255px;
         }
 
         &__intro 
@@ -210,11 +225,20 @@
             width: 100%;
         }
 
+        &__grid 
+        {
+            display: grid;
+             grid-template-columns: repeat((3, minmax(auto, 255px)));
+            grid-template-rows: auto auto;
+            row-gap: 2rem;
+        }
+
         &__block
         {
             &__inner 
             {
                 height: 100%;
+                padding: 1.93rem 2rem 2rem;
             }
             &__header 
             {
